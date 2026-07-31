@@ -1,43 +1,436 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>حرف آخر | متن عاشقانه، خیانت و انگیزشی</title>
-<meta name="description" content="حرف آخر؛ مجموعه متن‌های عاشقانه، خیانت، سنگین و جملات انگیزشی">
+
+<title>حرف آخر | متن عاشقانه | متن سنگین | متن غمگین | جملات انگیزشی</title>
+
+<meta name="description"
+content="حرف آخر؛ بزرگ‌ترین مرجع متن عاشقانه، متن غمگین، خیانت، انگیزشی، رفاقتی، تیکه دار و جملات خاص فارسی.">
+
+<meta name="keywords"
+content="حرف آخر, متن عاشقانه, متن غمگین, متن خیانت, متن انگیزشی, متن سنگین, جملات خاص">
+
+<meta name="theme-color" content="#0d0d0d">
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+
 </head>
+
 <body>
 
-<nav>
-<div class="logo">حرف آخر</div>
-<div class="menu">
-<a href="#">خانه</a>
-<a href="#">❤️ عاشقانه</a>
-<a href="#">💔 خیانت</a>
-<a href="#">🖤 سنگین</a>
-<a href="#">🔥 انگیزشی</a>
-<a href="#">✉ درباره ما</a>
+<div id="loader">
+
+<div class="loader-circle"></div>
+
+<h2>حرف آخر</h2>
+
+<p>در حال بارگذاری...</p>
+
 </div>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<span>حرف آخر</span>
+
+</div>
+
+<div class="menu">
+
+<a href="#">خانه</a>
+
+<a href="#love">عاشقانه</a>
+
+<a href="#sad">غمگین</a>
+
+<a href="#betray">خیانت</a>
+
+<a href="#heavy">سنگین</a>
+
+<a href="#motivation">انگیزشی</a>
+
+<a href="#new">جدیدترین</a>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجوی متن...">
+
+</div>
+
 </nav>
 
-<header>
-<h1>حرف آخر</h1>
-<p>جایی برای حرف‌هایی که در سکوت ماندند...</p>
+<header class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+حرف آخر
+
+</h1>
+
+<p>
+
+زیباترین مجموعه متن‌های عاشقانه، غمگین، خیانت،
+احساسی، انگیزشی و جملات خاص
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#cards" class="btn">
+
+شروع مطالعه
+
+</a>
+
+<a href="#new" class="btn2">
+
+جدیدترین متن‌ها
+
+</a>
+
+</div>
+
+</div>
+
 </header>
 
-<section class="cards">
-<div class="card"><h2>❤️ متن عاشقانه</h2><p>گاهی یک نفر وارد زندگی آدم می‌شود، نه برای ماندن... برای اینکه ارزش دوست داشتن را بفهمی.</p><button onclick="copyText(this)">کپی متن</button></div>
-<div class="card"><h2>💔 متن خیانت</h2><p>سخت‌ترین درد، رفتن آدم‌ها نیست؛ فهمیدن این است که کسی که باورش داشتی، آن چیزی نبود که فکر می‌کردی.</p><button onclick="copyText(this)">کپی متن</button></div>
-<div class="card"><h2>🔥 انگیزشی</h2><p>موفقیت از جایی شروع می‌شود که تصمیم می‌گیری حتی بدون تشویق دیگران ادامه بدهی.</p><button onclick="copyText(this)">کپی متن</button></div>
+<section class="stats">
+
+<div class="stat">
+
+<h2>
+
+10000+
+
+</h2>
+
+<p>
+
+متن خاص
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+500+
+
+</h2>
+
+<p>
+
+دسته‌بندی
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+روزانه
+
+</h2>
+
+<p>
+
+بروزرسانی
+
+</p>
+
+</div>
+
 </section>
 
-<footer>
-<p>حرف آخر © 2026</p>
-<p>Created by Pouya Brice</p>
-<p>Instagram | Telegram | Rubika: pouya_brice</p>
-</footer>
+<section id="cards" class="cards">
 
-<script src="script.js"></script>
-</body>
-</html>
+<div class="card" id="love">
+
+<span class="category">
+
+❤️ عاشقانه
+
+</span>
+
+<h2>
+
+متن عاشقانه
+
+</h2>
+
+<p>
+
+گاهی تمام زندگی،
+در لبخند کسی خلاصه می‌شود...
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+
+<div class="card" id="sad">
+
+<span class="category">
+
+🥀 غمگین
+
+</span>
+
+<h2>
+
+متن غمگین
+
+</h2>
+
+<p>
+
+بعضی دردها را
+فقط سکوت می‌تواند ترجمه کند...
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+
+<div class="card" id="betray">
+
+<span class="category">
+
+💔 خیانت
+
+</span>
+
+<h2>
+
+متن خیانت
+
+</h2>
+
+<p>
+
+بدترین خیانت،
+وقتی است که اعتماد را می‌کشند...
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+<div class="card" id="heavy">
+
+<span class="category">
+
+🖤 سنگین
+
+</span>
+
+<h2>
+
+متن سنگین
+
+</h2>
+
+<p>
+
+بعضی آدم‌ها آنقدر دیر می‌فهمند،
+که دیگر هیچ راه برگشتی باقی نمی‌ماند...
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+
+<div class="card" id="motivation">
+
+<span class="category">
+
+🔥 انگیزشی
+
+</span>
+
+<h2>
+
+متن انگیزشی
+
+</h2>
+
+<p>
+
+موفقیت زمانی آغاز می‌شود
+که تصمیم بگیری هرگز تسلیم نشوی.
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+
+<div class="card">
+
+<span class="category">
+
+🌹 احساسی
+
+</span>
+
+<h2>
+
+متن احساسی
+
+</h2>
+
+<p>
+
+گاهی تنها چیزی که نیاز داری،
+یک آغوش واقعی است...
+
+</p>
+
+<button onclick="copyText(this)">
+
+کپی متن
+
+</button>
+
+</div>
+
+</section>
+
+<section class="featured">
+
+<h2>
+
+⭐ محبوب‌ترین متن‌ها
+
+</h2>
+
+<div class="featured-grid">
+
+<div class="featured-card">
+
+<h3>
+
+❤️ عشق واقعی
+
+</h3>
+
+<p>
+
+دوست داشتن،
+انتخاب هر روزه‌ی یک نفر است...
+
+</p>
+
+</div>
+
+<div class="featured-card">
+
+<h3>
+
+💔 جدایی
+
+</h3>
+
+<p>
+
+بعضی رفتن‌ها،
+آدم را برای همیشه عوض می‌کنند.
+
+</p>
+
+</div>
+
+<div class="featured-card">
+
+<h3>
+
+🔥 موفقیت
+
+</h3>
+
+<p>
+
+اگر امروز سخت تلاش کنی،
+فردا به خودت افتخار خواهی کرد.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="new" class="latest">
+
+<h2>
+
+جدیدترین متن‌ها
+
+</h2>
+
+<div class="latest-container">
+
+<article class="latest-post">
+
+<h3>
+
+متن عاشقانه کوتاه
+
+</h3>
+
+<p>
+
+تو زیباترین اتفاقی بودی
+که زندگی برایم رقم زد...
+
+</p>
