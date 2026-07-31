@@ -1,0 +1,59 @@
+body{
+margin:0;
+font-family:tahoma;
+background:#080808;
+color:white;
+text-align:center;
+}
+header{
+padding:60px 20px;
+background:#111;
+}
+h1{
+font-size:50px;
+color:#d4af37;
+}
+header p{
+font-size:20px;
+color:#ccc;
+}
+.categories button{
+margin:10px;
+padding:12px 25px;
+background:#d4af37;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+.texts{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+.card{
+background:#151515;
+margin:20px;
+padding:25px;
+width:300px;
+border-radius:15px;
+}
+.card h2{
+color:#d4af37;
+}
+.card button{
+background:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+footer{
+margin-top:50px;
+padding:30px;
+background:#111;
+color:#aaa;
+}
+@media(max-width:600px){
+h1{font-size:38px;}
+.card{width:85%;}
+}
