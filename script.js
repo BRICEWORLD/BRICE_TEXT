@@ -320,29 +320,45 @@ counters.forEach(counter=>{
 });
 
 
-
-
 //==================================================
 // IMAGE HOVER EFFECT
 //==================================================
-
 
 const images = document.querySelectorAll(
     ".gallery-item img, .portfolio-card img"
 );
 
+images.forEach(image => {
+
+    image.addEventListener("mousemove", (e) => {
+
+        const rect = image.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+
+        image.style.transform =
+        `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+
+    });
 
 
-images.forEach(image=>{
+    image.addEventListener("mouseleave", () => {
 
+        image.style.transform =
+        "perspective(600px) rotateX(0) rotateY(0) scale(1)";
 
-    image.addEventListener(
-        "mousemove",
-        (e)=>{
+    });
 
+});
 
-            const
-              /*==================================================
+/*==================================================
 TYPE WRITER EFFECT
 ==================================================*/
 
