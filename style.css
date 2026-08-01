@@ -534,7 +534,7 @@ linear-gradient(
 #0d0d0d
 );
 
-border:1    /* Categories */
+border:1px solid rgba(212,175,55,.2);  /* Categories */
 
 
 .categories{
@@ -1289,7 +1289,11 @@ font-size:25px;
 
 .quotes-grid{
 
-grid-template-columns:1fr   /* Final Effects */
+grid-template-columns:1fr;
+
+}
+
+}
 
 
 /* Smooth Reveal */
