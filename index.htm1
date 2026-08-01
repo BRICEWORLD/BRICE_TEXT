@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حرف آخر | بزرگ‌ترین مرجع متن‌های خاص فارسی</title>
+
+<meta name="description"
+content="مرجع متن‌های عاشقانه، غمگین، سنگین، انگیزشی، زندگی، شب و هزاران متن خاص فارسی.">
+
+<meta name="keywords"
+content="حرف آخر, متن عاشقانه, متن غمگین, متن انگیزشی, متن سنگین, متن زندگی, متن شب">
+
+<meta name="author" content="Pouya Brice">
+
+<meta name="theme-color" content="#0b0b0b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="loader-circle"></div>
+
+<h2>حرف آخر</h2>
+
+<p>در حال بارگذاری...</p>
+
+</div>
+
+<!-- Header -->
+
+<header class="header">
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="#" class="logo">
+
+<span>HARF</span>
+
+<strong>AKHAR</strong>
+
+</a>
+
+<div class="menu-btn" id="menuBtn">
+
+☰
+
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">خانه</a></li>
+
+<li><a href="#random">متن تصادفی</a></li>
+
+<li><a href="#categories">دسته‌بندی</a></li>
+
+<li><a href="#quotes">متن‌ها</a></li>
+
+<li><a href="#about">درباره</a></li>
+
+<li><a href="#contact">ارتباط</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- Hero -->
+
+<section id="home" class="hero">
+
+<div class="container hero-content">
+
+<h1>
+
+بزرگ‌ترین مرجع متن‌های خاص فارسی
+
+</h1>
+
+<p>
+
+هزاران متن عاشقانه، غمگین، سنگین، انگیزشی، زندگی و شب، با طراحی مدرن و تجربه‌ای سریع و روان.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#random" class="btn gold">
+
+🎲 متن تصادفی
+
+</a>
+
+<a href="#quotes" class="btn">
+
+📖 مشاهده متن‌ها
+
+</a>
+
+</div>
+
+</div>
+
+</section>  <!-- Random Quote -->
+
+<section id="random" class="random-section">
+
+<div class="container">
+
+<h2 class="section-title">
+✨ متن تصادفی
+</h2>
+
+
+<div class="random-box">
+
+<p id="randomQuote">
+برای دریافت یک متن خاص، روی دکمه کلیک کنید.
+</p>
+
+
+<div class="random-actions">
+
+<button id="newQuoteBtn" class="btn gold">
+🎲 متن جدید
+</button>
+
+
+<button id="copyRandomBtn" class="btn">
+📋 کپی
+</button>
+
+
+<button id="shareRandomBtn" class="btn">
+📤 اشتراک
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Search -->
+
+<section class="search-section">
+
+<div class="container">
+
+<h2 class="section-title">
+🔍 جستجوی متن
+</h2>
+
+
+<div class="search-box">
+
+<input 
+type="text"
+id="searchInput"
+placeholder="جستجو بین متن‌ها..."
+autocomplete="off">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- Categories -->
+
+<section id="categories" class="categories">
+
+<div class="container">
+
+
+<h2 class="section-title">
+دسته‌بندی متن‌ها
+</h2>
+
+
+<div class="category-grid">
+
+
+<button class="category-card active" data-category="all">
+
+✨
+
+<span>
+همه
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="love">
+
+❤️
+
+<span>
+عاشقانه
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="sad">
+
+🥀
+
+<span>
+غمگین
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="dark">
+
+🖤
+
+<span>
+سنگین
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="life">
+
+🌱
+
+<span>
+زندگی
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="night">
+
+🌙
+
+<span>
+شب
+</span>
+
+</button>
+
+
+
+<button class="category-card" data-category="motivation">
+
+🔥
+
+<span>
+انگیزشی
+</span>
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Quotes Container -->
+
+
+<section id="quotes" class="quotes-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+📖 متن‌ها
+</h2>
+
+
+<div id="quotesContainer" class="quotes-grid">
+
+
+<!-- متن‌ها توسط JavaScript ساخته می‌شوند -->
+
+
+</div>
+
+
+</div>
+
+
+</section>     <!-- About Section -->
+
+<section id="about" class="about-section">
+
+<div class="container">
+
+
+<h2 class="section-title">
+👑 درباره حرف آخر
+</h2>
+
+
+<div class="about-box">
+
+
+<p>
+
+حرف آخر یک مجموعه مدرن از متن‌های خاص فارسی است؛ جایی برای پیدا کردن جمله‌هایی که احساسات، تجربه‌ها، امید و لحظه‌های زندگی را بیان می‌کنند.
+
+</p>
+
+
+<p>
+
+این پروژه توسط <strong>Pouya Brice</strong> طراحی و توسعه داده شده است.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Contact Section -->
+
+
+<section id="contact" class="contact-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+📞 ارتباط با ما
+</h2>
+
+
+
+<div class="contact-grid">
+
+
+
+<div class="contact-card">
+
+<h3>
+👤 سازنده
+</h3>
+
+<p>
+Pouya Brice
+</p>
+
+</div>
+
+
+
+
+<div class="contact-card">
+
+<h3>
+📷 اینستاگرام
+</h3>
+
+<a href="https://instagram.com/pouya_brice" target="_blank">
+
+@pouya_brice
+
+</a>
+
+</div>
+
+
+
+
+
+<div class="contact-card">
+
+<h3>
+✈️ تلگرام
+</h3>
+
+<a href="https://t.me/pouya_brice" target="_blank">
+
+@pouya_brice
+
+</a>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Footer -->
+
+
+<footer class="footer">
+
+
+<div class="container">
+
+
+<h2>
+HARF AKHAR
+</h2>
+
+
+<p>
+
+Designed & Developed by 
+
+<strong>
+Pouya Brice
+</strong>
+
+</p>
+
+
+
+<div class="footer-links">
+
+
+<a href="#home">
+خانه
+</a>
+
+
+<a href="#quotes">
+متن‌ها
+</a>
+
+
+<a href="#contact">
+ارتباط
+</a>
+
+
+</div>
+
+
+
+<p class="copyright">
+
+© 2026 Harf Akhar - All Rights Reserved.
+
+</p>
+
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+<!-- Back To Top -->
+
+
+<button id="backTop" class="back-top">
+
+↑
+
+</button>     <!-- Scripts -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
