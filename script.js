@@ -3,23 +3,7 @@
    Replace your old script.js with this file.
 */
 
-const quotes = [
-{
-id:1,
-category:"love",
-text:"تو فقط یک آدم در زندگی من نیستی؛ تو همان آرامشی هستی که بعد از تمام طوفان‌ها دنبالش می‌گشتم."
-},
-{
-id:2,
-category:"love",
-text:"عشق واقعی یعنی در سخت‌ترین روزها هم دلیل ماندن یکدیگر باشیم."
-},
-{
-id:3,
-category:"life",
-text:"هر روز یک فرصت تازه برای بهتر شدن است."
-}
-];
+// quotes loaded from quotes.js
 
 const quotesContainer = document.getElementById("quotesContainer");
 const searchInput = document.getElementById("searchInput");
