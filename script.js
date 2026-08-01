@@ -484,7 +484,65 @@ document.querySelectorAll(
 //==================================================
 
 
-console.log(
+console.log(//==============================
+// RANDOM QUOTES
+//==============================
+
+let allQuotes = [];
+
+if (typeof quotes !== "undefined") allQuotes.push(...quotes);
+if (typeof loveQuotesPart2 !== "undefined") allQuotes.push(...loveQuotesPart2);
+if (typeof loveQuotesPart3 !== "undefined") allQuotes.push(...loveQuotesPart3);
+if (typeof darkQuotes !== "undefined") allQuotes.push(...darkQuotes);
+if (typeof darkQuotesPart2 !== "undefined") allQuotes.push(...darkQuotesPart2);
+if (typeof sadQuotes !== "undefined") allQuotes.push(...sadQuotes);
+if (typeof sadQuotesPart2 !== "undefined") allQuotes.push(...sadQuotesPart2);
+if (typeof motivationalQuotes !== "undefined") allQuotes.push(...motivationalQuotes);
+if (typeof motivationalQuotesPart2 !== "undefined") allQuotes.push(...motivationalQuotesPart2);
+if (typeof lifeQuotes !== "undefined") allQuotes.push(...lifeQuotes);
+if (typeof lifeQuotesPart2 !== "undefined") allQuotes.push(...lifeQuotesPart2);
+if (typeof nightQuotes !== "undefined") allQuotes.push(...nightQuotes);
+if (typeof nightQuotesPart2 !== "undefined") allQuotes.push(...nightQuotesPart2);
+
+const randomQuote = document.getElementById("randomQuote");
+const newQuoteBtn = document.getElementById("newQuoteBtn");
+const copyQuoteBtn = document.getElementById("copyQuoteBtn");
+
+function showRandomQuote() {
+
+    if (!randomQuote || allQuotes.length === 0) return;
+
+    const item =
+        allQuotes[Math.floor(Math.random() * allQuotes.length)];
+
+    randomQuote.innerText = item.text;
+}
+
+if (newQuoteBtn) {
+
+    newQuoteBtn.addEventListener("click", showRandomQuote);
+
+}
+
+if (copyQuoteBtn) {
+
+    copyQuoteBtn.addEventListener("click", () => {
+
+        navigator.clipboard.writeText(randomQuote.innerText);
+
+        copyQuoteBtn.innerText = "✅ کپی شد";
+
+        setTimeout(() => {
+
+            copyQuoteBtn.innerText = "📋 کپی متن";
+
+        },1500);
+
+    });
+
+}
+
+showRandomQuote();
 `
 ================================
   HARF AKHAR V3
