@@ -1546,3 +1546,67 @@ box-shadow:0 15px 40px rgba(212,175,55,.25);
 border-color:#d4af37;
 
 }
+
+/* Category Quote Style */
+
+.quotes .quote-box{
+    margin:35px 0;
+    padding:25px;
+    background:#111;
+    border-radius:20px;
+    border:1px solid rgba(212,175,55,0.5);
+    position:relative;
+    line-height:2.2;
+}
+
+
+/* علامت وسط بین متن ها */
+
+.quotes .quote-box::after{
+
+    content:"✦";
+
+    display:block;
+
+    text-align:center;
+
+    color:#d4af37;
+
+    font-size:22px;
+
+    margin-top:20px;
+
+}
+
+
+/* فاصله متن */
+
+.quotes .quote-box p{
+
+    margin:0;
+
+    font-size:20px;
+
+}
+
+
+/* موبایل */
+
+@media(max-width:600px){
+
+.quotes .quote-box{
+
+    padding:20px;
+
+    margin:25px 0;
+
+}
+
+
+.quotes .quote-box p{
+
+    font-size:17px;
+
+}
+
+}
