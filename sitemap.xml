@@ -2,61 +2,53 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/love.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/love.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/motivation.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/motivation.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/sad.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/sad.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/life.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/life.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/night.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/night.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
-
 <url>
-    <loc>https://pouyabrice7.github.io/harf-akhar/dark.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://pouyabrice7.github.io/BRICE_TEXT/dark.html</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
-
 
 </urlset>
