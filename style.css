@@ -2102,3 +2102,31 @@ grid-template-columns:1fr;
 html,body{
     overflow-x:hidden;
 }
+
+
+/* Mobile = Desktop Layout */
+@media (max-width: 900px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .container{
+        width:92%;
+        max-width:1200px;
+        margin:auto;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .stats-box{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .quotes-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
