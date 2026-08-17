@@ -2000,3 +2000,99 @@ color:#aaa;
 font-size:16px;
 
 }
+
+/* ==============================
+   QUICK ACCESS
+============================== */
+
+.quick-section{
+
+padding:80px 0;
+
+}
+
+
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.quick-card{
+
+background:
+
+linear-gradient(
+145deg,
+#161616,
+#080808
+);
+
+
+border:1px solid var(--border);
+
+border-radius:25px;
+
+padding:35px 25px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+
+
+.quick-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:
+0 20px 50px rgba(212,175,55,.12);
+
+}
+
+
+
+.quick-card h3{
+
+color:var(--gold-light);
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.quick-card p{
+
+color:#aaa;
+
+font-size:15px;
+
+line-height:2;
+
+}
+
+
+
+@media(max-width:900px){
+
+.quick-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
