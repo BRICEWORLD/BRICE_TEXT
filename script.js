@@ -46,3 +46,46 @@ if(loader){
 setTimeout(()=>loader.style.display="none",700);
 }
 });
+
+// Category pages copy system
+
+document.querySelectorAll(".quote-box").forEach(box=>{
+
+const text = box.querySelector("p");
+
+if(text){
+
+text.classList.add("quote-text");
+
+
+const button = document.createElement("button");
+
+button.className="copy-btn";
+
+button.innerHTML="📋 کپی متن";
+
+
+button.onclick=()=>{
+
+navigator.clipboard.writeText(text.innerText);
+
+
+button.innerHTML="✅ کپی شد";
+
+
+setTimeout(()=>{
+
+button.innerHTML="📋 کپی متن";
+
+},1500);
+
+
+};
+
+
+box.appendChild(button);
+
+
+}
+
+});
