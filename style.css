@@ -1889,3 +1889,65 @@ font-size:
 
 
 }
+
+/* CATEGORY QUOTES BOX */
+
+.quotes{
+    padding:60px 0;
+    max-width:900px;
+    margin:auto;
+}
+
+
+.quotes h2{
+    text-align:center;
+    color:var(--gold-light);
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+
+.quote-box{
+
+    background:
+    linear-gradient(
+    145deg,
+    #151515,
+    #080808
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:25px 30px;
+
+    margin-bottom:25px;
+
+    color:#eee;
+
+    font-size:18px;
+
+    line-height:2.2;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.5);
+
+    transition:.3s;
+}
+
+
+.quote-box:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--gold);
+
+}
+
+
+.quote-box p{
+
+    margin:0;
+
+}
