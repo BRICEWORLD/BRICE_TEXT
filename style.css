@@ -1630,3 +1630,31 @@ border-color:#d4af37;
     margin-top:25px;
     font-size:25px;
 }
+
+/* =====================================
+   BRICE TEXT
+   Disable manual text selection
+===================================== */
+
+.quote-card,
+.quote-text,
+.quotes,
+.quotes-section {
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+
+
+/* Keep copy button clickable */
+
+.copy-btn {
+
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+
+}
