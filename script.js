@@ -28,7 +28,7 @@ list.forEach(quote=>{
 
 }
 
-displayQuotes(quotes);
+displayQuotes(quotes.slice(0,6));
 
 if(searchInput){
 searchInput.addEventListener("input",()=>{
