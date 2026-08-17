@@ -1790,9 +1790,9 @@ font-size:24px;
 
 .hero{
 
-min-height:
+min-height:55vh;
 
-25vh;
+padding:40px 0;
 
 }
 
@@ -1802,7 +1802,7 @@ min-height:
 
 font-size:
 
-50px;
+42px;
 
 }
 
