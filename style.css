@@ -1951,3 +1951,24 @@ font-size:
     margin:0;
 
 }
+
+.category-image img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+}
+
+
+@media(max-width:600px){
+
+.category-image img{
+
+height:260px;
+
+}
+
+}
