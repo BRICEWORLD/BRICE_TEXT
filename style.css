@@ -1972,3 +1972,31 @@ height:260px;
 }
 
 }
+
+.category-header{
+
+text-align:center;
+
+padding:35px 20px;
+
+}
+
+
+.category-header h1{
+
+font-size:32px;
+
+color:var(--gold-light);
+
+margin-bottom:10px;
+
+}
+
+
+.category-header p{
+
+color:#aaa;
+
+font-size:16px;
+
+}
