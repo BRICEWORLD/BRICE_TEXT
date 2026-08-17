@@ -1994,32 +1994,3 @@ line-height:2;
 
 }
 
-
-
-/* DESKTOP VIEW ON MOBILE */
-
-@media(max-width:900px){
-
-html,body{
-    min-width:1200px;
-    overflow-x:auto;
-}
-
-.container{
-    width:1200px;
-    max-width:none;
-}
-
-.category-grid{
-    grid-template-columns:repeat(3,1fr);
-}
-
-.quotes-grid{
-    grid-template-columns:repeat(3,1fr);
-}
-
-.stats-box{
-    grid-template-columns:repeat(4,1fr);
-}
-
-}
