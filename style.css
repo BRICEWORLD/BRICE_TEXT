@@ -2006,46 +2006,15 @@ line-height:2;
 
 
 
-@media(max-width:900px){
-
-.quick-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
 
 @media(max-width:900px){
 
-html,body{
-    overflow-x:hidden;
+.nav-links{
+display:none;
 }
 
-
-/* Mobile = Desktop Layout */
-@media (max-width: 900px){
-
-    body{
-        overflow-x:hidden;
-    }
-
-    .container{
-        width:92%;
-        max-width:1200px;
-        margin:auto;
-    }
-
-    .category-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .stats-box{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .quotes-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+.menu-btn{
+display:block;
+}
 
 }
