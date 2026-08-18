@@ -1687,3 +1687,36 @@ bottom:15px;
 
 
 }
+
+
+/* =========================
+   MOBILE MENU FIX
+========================= */
+
+@media(max-width:600px){
+
+.nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:100%;
+    background:#050505;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    display:none;
+    z-index:999;
+}
+
+
+.nav-links.active{
+    display:flex;
+}
+
+
+.menu-btn{
+    display:block;
+    cursor:pointer;
+}
+
+}
