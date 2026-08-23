@@ -1,4 +1,5 @@
 User-agent: *
+
 Allow: /
 
-Sitemap: https://pouyabrice7.github.io/harf-akhar/sitemap.xml
+Sitemap: https://pouyabrice7.github.io/BRICE_TEXT/sitemap.xml
