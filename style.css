@@ -8,15 +8,40 @@
 
 :root{
 
---bg:#050505;
---card:#111111;
---gold:#d4af37;
---gold-light:#f6d365;
---white:#f5f5f5;
---text:#e8e4d8;
---muted:#999;
---border:rgba(212,175,55,.25);
---shadow:0 20px 60px rgba(0,0,0,.6);
+--bg:#07090D;
+
+--bg-soft:#0D1117;
+
+--card:#111820;
+
+--card-hover:#17212B;
+
+
+/* BRICE ICE */
+
+--ice:#B9F3FF;
+
+--ice-light:#E6FBFF;
+
+
+/* PREMIUM GOLD */
+
+--gold:#D6B25E;
+
+--gold-light:#F4D98B;
+
+
+--white:#F5F7FA;
+
+--text:#E8EEF5;
+
+--muted:#8B98A8;
+
+
+--border:rgba(185,243,255,.18);
+
+--shadow:0 20px 60px rgba(0,0,0,.65);
+
 --radius:22px;
 
 }
@@ -47,7 +72,7 @@ background:
 
 radial-gradient(
 circle at top,
-rgba(212,175,55,.08),
+rgba(185,243,255,.08)
 transparent 35%
 ),
 
@@ -248,7 +273,7 @@ color:white;
 
 .logo strong{
 
-color:var(--gold);
+color:var(--ice);
 
 }
 
@@ -377,7 +402,7 @@ border:1px solid var(--border);
 
 border-radius:50px;
 
-color:var(--gold-light);
+color:var(--ice-light);
 
 background:rgba(212,175,55,.08);
 
