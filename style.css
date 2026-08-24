@@ -9,41 +9,44 @@
 
 :root{
 
---bg:#07090D;
+/* BACKGROUND */
+--bg:#02020A;
+--bg-soft:#080812;
 
---bg-soft:#0D1117;
 
---card:#111820;
-
---card-hover:#17212B;
+/* CARDS */
+--card:#0B0B16;
+--card-hover:#15152A;
 
 
 /* BRICE PURPLE */
-
---ice:#A78BFA;
-
---ice-light:#DDD6FE;
+--ice:#A855F7;
+--ice-light:#D8B4FE;
 
 
 /* PREMIUM GOLD */
-
 --gold:#D6B25E;
-
 --gold-light:#F4D98B;
 
 
---white:#DDE3EA;
+/* TEXT */
+--white:#F5F3FF;
+--text:#D8D5E5;
+--muted:#9993B5;
 
---text:#C9D1D9;
 
---muted:#8993A0;
+/* PURPLE BORDER */
+--border:
+rgba(168,85,247,.45);
 
 
---border:rgba(167,139,250,.18);
+/* GLOW */
+--shadow:
+0 20px 60px rgba(168,85,247,.18);
 
---shadow:0 20px 60px rgba(0,0,0,.65);
 
---radius:22px;
+/* RADIUS */
+--radius:24px;
 
 }
 
@@ -72,16 +75,17 @@ background:
 
 radial-gradient(
 circle at top,
-rgba(167,139,250,.10),
-transparent 30%
+rgba(168,85,247,.15),
+transparent 35%
 ),
 
 linear-gradient(
 180deg,
-#020202,
-#050505,
-#000000
+#02020A,
+#050510,
+#02020A
 );
+
 
 color:var(--text);
 
@@ -1782,36 +1786,51 @@ padding:25px 20px;
 
 border-radius:30px;
 
+
 background:
 linear-gradient(
 145deg,
-rgba(10,10,15,.95),
-rgba(0,0,0,.98)
+rgba(168,85,247,.08),
+rgba(5,5,15,.95)
 );
 
-border:1px solid rgba(167,139,250,.8);
+
+border:
+
+1px solid rgba(168,85,247,.8);
+
 
 box-shadow:
 
-0 0 35px rgba(167,139,250,.35),
-inset 0 0 30px rgba(167,139,250,.05);
+0 0 40px rgba(168,85,247,.35),
+inset 0 0 40px rgba(168,85,247,.08);
+
+
+border-radius:30px;
 
 }
 
 
 .stat-item{
 
-border:1px solid rgba(167,139,250,.35);
+background:
+rgba(10,10,20,.75);
+
+
+border:
+
+1px solid rgba(168,85,247,.35);
+
+
+box-shadow:
+
+0 0 20px rgba(168,85,247,.12);
+
 
 border-radius:22px;
 
-background:
-rgba(10,10,15,.7);
-
-box-shadow:
-0 0 20px rgba(167,139,250,.08);
-
 }
+
 
 .stat-icon {
     font-size: 22px;
