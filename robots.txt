@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://pouyabrice7.github.io/BRICE_TEXT/sitemap.xml
+Sitemap: https://briceworld.github.io/BRICE_TEXT/sitemap.xml
