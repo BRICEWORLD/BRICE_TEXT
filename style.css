@@ -592,7 +592,7 @@ background:
 linear-gradient(
 145deg,
 rgba(167,139,250,.08),
-rgba(10,10,10,.95)
+rgba(10,10,10,.95),
 rgba(7,9,13,.98)
 );
 
@@ -692,8 +692,6 @@ margin-bottom:15px;
 .category-card h3{
 
 color:#F4D98B;
-
-}
 
 text-shadow:
 
