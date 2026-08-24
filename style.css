@@ -340,21 +340,21 @@ content:"";
 
 position:absolute;
 
-width:500px;
+width:550px;
 
-height:500px;
+height:550px;
 
 background:
 
 radial-gradient(
 circle,
-rgba(212,175,55,.12),
+rgba(185,243,255,.18),
 transparent 70%
 );
 
-filter:blur(40px);
+filter:blur(50px);
 
-top:10%;
+top:5%;
 
 left:50%;
 
@@ -366,16 +366,12 @@ transform:translateX(-50%);
 
 .hero-overlay{
 
-position:absolute;
-
-inset:0;
-
 background:
 
 linear-gradient(
 180deg,
 transparent,
-#050505
+#07090D
 );
 
 }
@@ -432,7 +428,7 @@ background:
 
 linear-gradient(
 135deg,
-var(--gold),
+var(--ice),
 var(--gold-light)
 );
 
