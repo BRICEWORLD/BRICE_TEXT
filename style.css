@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
 
 
+
 :root{
 
 --bg:#07090D;
@@ -17,11 +18,11 @@
 --card-hover:#17212B;
 
 
-/* BRICE ICE */
+/* BRICE PURPLE */
 
---ice:#B9F3FF;
+--ice:#A78BFA;
 
---ice-light:#E6FBFF;
+--ice-light:#DDD6FE;
 
 
 /* PREMIUM GOLD */
@@ -38,14 +39,13 @@
 --muted:#8993A0;
 
 
---border:rgba(185,243,255,.18);
+--border:rgba(167,139,250,.18);
 
 --shadow:0 20px 60px rgba(0,0,0,.65);
 
 --radius:22px;
 
 }
-
 
 
 /* RESET */
