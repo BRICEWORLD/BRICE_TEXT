@@ -72,7 +72,7 @@ background:
 
 radial-gradient(
 circle at top,
-rgba(185,243,255,.08)
+rgba(185,243,255,.08),
 transparent 35%
 ),
 
@@ -231,9 +231,9 @@ top:0;
 
 z-index:1000;
 
-background:rgba(5,5,5,.85);
 
-backdrop-filter:blur(15px);
+background:rgba(7,9,13,.88);
+backdrop-filter:blur(18px);
 
 border-bottom:1px solid var(--border);
 
