@@ -71,21 +71,21 @@ direction:rtl;
 
 font-family:"Vazirmatn",sans-serif;
 
+/* پس زمینه اصلی BRICE TEXT */
 background:
 
 radial-gradient(
-circle at top,
-rgba(168,85,247,.15),
-transparent 35%
+    circle at 50% 42%,
+    rgba(120,40,220,.07),
+    transparent 38%
 ),
 
 linear-gradient(
-180deg,
-#02020A,
-#050510,
-#02020A
+    180deg,
+    #05040A 0%,
+    #07040D 45%,
+    #030207 100%
 );
-
 
 color:var(--text);
 
@@ -94,7 +94,6 @@ line-height:2;
 overflow-x:hidden;
 
 }
-
 
 
 a{
@@ -2262,4 +2261,51 @@ border-color:#A78BFA;
 box-shadow:
 0 0 40px rgba(167,139,250,.35);
 
+}
+
+
+
+/* =====================================
+   BRICE TEXT - TRUE BLACK BACKGROUND
+===================================== */
+
+html,
+body{
+    background:#05040A;
+}
+
+main,
+section,
+.hero,
+.stats-section,
+.categories,
+.random-section,
+.search-section,
+.quotes-section,
+.quick-section,
+.brand-contact,
+.about-section{
+    background:transparent !important;
+}
+
+/* هاله بسیار ظریف بنفش */
+body::before{
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(130,50,230,.08),
+            transparent 42%
+        );
+
+    opacity:.8;
 }
