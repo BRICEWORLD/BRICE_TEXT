@@ -2010,3 +2010,179 @@ background:transparent;
     }
 
 }
+
+
+
+/* =====================================
+   BRICE TEXT
+   PREMIUM QUOTE BOXES
+===================================== */
+
+.quotes {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+/* عنوان هر بخش */
+
+.quotes h2 {
+    color: #A78BFA;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+
+    margin: 55px 0 25px;
+
+    text-shadow:
+        0 0 12px rgba(167,139,250,.35),
+        0 0 25px rgba(167,139,250,.12);
+}
+
+
+/* اولین عنوان فاصله کمتر */
+
+.quotes h2:first-child {
+    margin-top: 0;
+}
+
+
+/* هر متن = یک کادر جدا */
+
+.quote-box {
+
+    position: relative;
+
+    margin: 18px 0;
+
+    padding: 22px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(167,139,250,.10),
+            rgba(17,24,32,.96)
+        );
+
+    border: 1px solid rgba(167,139,250,.45);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.45),
+        0 0 20px rgba(167,139,250,.06);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* خط بنفش ظریف کنار کادر */
+
+.quote-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    bottom: 12px;
+    right: 0;
+
+    width: 3px;
+
+    background: #A78BFA;
+
+    border-radius: 10px 0 0 10px;
+
+    box-shadow:
+        0 0 12px rgba(167,139,250,.65);
+}
+
+
+/* متن */
+
+.quote-box p {
+
+    margin: 0;
+
+    color: #E5E7EB;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    text-align: right;
+
+}
+
+
+/* هاور کامپیوتر */
+
+.quote-box:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #A78BFA;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.55),
+        0 0 25px rgba(167,139,250,.15);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .quotes {
+
+        width: 92%;
+
+        padding: 35px 0;
+    }
+
+
+    .quotes h2 {
+
+        font-size: 20px;
+
+        line-height: 1.8;
+
+        margin: 42px 0 20px;
+    }
+
+
+    .quote-box {
+
+        margin: 14px 0;
+
+        padding: 18px 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .quote-box p {
+
+        font-size: 15px;
+
+        line-height: 2;
+
+    }
+
+
+    .quote-box::before {
+
+        top: 10px;
+        bottom: 10px;
+
+        width: 2px;
+    }
+
+}
