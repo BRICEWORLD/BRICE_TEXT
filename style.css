@@ -72,14 +72,14 @@ background:
 
 radial-gradient(
 circle at top,
-rgba(167,139,250,.12),
-transparent 35%
+rgba(167,139,250,.10),
+transparent 30%
 ),
 
 linear-gradient(
 180deg,
-#080611,
-#050509,
+#020202,
+#050505,
 #000000
 );
 
@@ -127,18 +127,13 @@ margin:auto;
 
 .section-title{
 
-text-align:center;
+color:var(--ice-light);
 
-font-size:32px;
+text-shadow:
 
-font-weight:800;
-
-color:var(--gold-light);
-
-margin-bottom:45px;
+0 0 20px rgba(167,139,250,.5);
 
 }
-
 
 
 /* BUTTON */
@@ -1779,35 +1774,46 @@ bottom:15px;
 }
 
 
-.stats-box {
+.stats-box{
 
 max-width:750px;
 
 margin:auto;
 
-padding:18px 15px;
+padding:25px 20px;
 
-border:1px solid rgba(167,139,250,.45);
-
-border-radius:25px;
+border-radius:30px;
 
 background:
 linear-gradient(
 145deg,
-rgba(167,139,250,.12),
-rgba(10,10,15,.95)
+rgba(10,10,15,.95),
+rgba(0,0,0,.98)
 );
 
+border:1px solid rgba(167,139,250,.8);
+
 box-shadow:
-0 0 35px rgba(167,139,250,.15);
+
+0 0 35px rgba(167,139,250,.35),
+inset 0 0 30px rgba(167,139,250,.05);
 
 }
 
 
-.stat-item {
-    padding: 8px;
-}
+.stat-item{
 
+border:1px solid rgba(167,139,250,.35);
+
+border-radius:22px;
+
+background:
+rgba(10,10,15,.7);
+
+box-shadow:
+0 0 20px rgba(167,139,250,.08);
+
+}
 
 .stat-icon {
     font-size: 22px;
