@@ -1720,3 +1720,71 @@ bottom:15px;
 }
 
 }
+
+
+/* Compact Statistics Box */
+
+.stats-box {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid rgba(212,175,55,0.45);
+    border-radius: 25px;
+    background: rgba(20,18,12,0.65);
+}
+
+
+.stat-item {
+    padding: 15px;
+}
+
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+
+.stat-item h3 {
+    font-size: 28px;
+    color: #d4af37;
+    margin: 5px 0;
+}
+
+
+.stat-item p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.stats-box {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+.stat-item {
+    padding: 10px;
+}
+
+
+.stat-icon {
+    font-size: 22px;
+}
+
+
+.stat-item h3 {
+    font-size: 22px;
+}
+
+
+.stat-item p {
+    font-size: 12px;
+}
+
+}
