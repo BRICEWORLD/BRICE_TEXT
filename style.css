@@ -2309,3 +2309,308 @@ body::before{
 
     opacity:.8;
 }
+
+
+
+/* =====================================
+   BRICE TEXT
+   SPECIAL AD / CONTACT FRAME
+   UNIQUE SEGMENTED BORDER
+===================================== */
+
+.brand-box{
+
+    position:relative;
+
+    width:92%;
+    max-width:850px;
+
+    margin:0 auto;
+
+    padding:38px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101010,
+            #080808 70%,
+            #0b0712
+        );
+
+    border:none;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.55),
+        0 0 35px rgba(168,85,247,.08);
+
+    overflow:visible;
+}
+
+
+/* =====================================
+   تکه‌های اصلی کادر
+===================================== */
+
+.brand-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            #A855F7 0%,
+            #A855F7 14%,
+
+            transparent 14%,
+            transparent 22%,
+
+            #C084FC 22%,
+            #C084FC 38%,
+
+            transparent 38%,
+            transparent 47%,
+
+            #A855F7 47%,
+            #A855F7 63%,
+
+            transparent 63%,
+            transparent 72%,
+
+            #C084FC 72%,
+            #C084FC 88%,
+
+            transparent 88%,
+            transparent 100%
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================
+   تکه‌های عمودی کناره‌ها
+===================================== */
+
+.brand-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border-left:
+        1px solid rgba(168,85,247,.45);
+
+    border-right:
+        1px solid rgba(168,85,247,.45);
+
+    border-radius:20px;
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================
+   عنوان
+===================================== */
+
+.brand-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:32px;
+
+    color:var(--gold-light);
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 15px rgba(244,217,139,.15);
+}
+
+
+/* متن توضیح */
+
+.brand-box p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#C9C9C9;
+
+    max-width:680px;
+
+    margin:18px auto 28px;
+
+    line-height:2;
+
+}
+
+
+/* =====================================
+   کادرهای تلگرام و اینستاگرام
+===================================== */
+
+.contact-buttons{
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+
+.social-btn{
+
+    position:relative;
+
+    min-width:220px;
+
+    padding:18px 22px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:#0D0D0D;
+
+    color:var(--gold-light);
+
+    overflow:hidden;
+
+}
+
+
+/* خط تکه‌ای دور هر دکمه */
+
+.social-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    padding:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+
+            rgba(168,85,247,.8) 0 25%,
+            transparent 25% 38%,
+            rgba(192,132,252,.7) 38% 62%,
+            transparent 62% 75%,
+            rgba(168,85,247,.8) 75% 100%
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+}
+
+
+/* =====================================
+   هاور خیلی ظریف
+===================================== */
+
+.social-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(168,85,247,.16);
+
+}
+
+
+.brand-box:hover{
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.6),
+        0 0 45px rgba(168,85,247,.12);
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:600px){
+
+    .brand-box{
+
+        width:94%;
+
+        padding:30px 18px;
+
+        border-radius:24px;
+    }
+
+
+    .brand-box h2{
+
+        font-size:24px;
+
+        line-height:1.8;
+    }
+
+
+    .brand-box p{
+
+        font-size:14px;
+
+        line-height:2.2;
+
+        margin:15px auto 25px;
+    }
+
+
+    .social-btn{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:16px;
+    }
+
+}
