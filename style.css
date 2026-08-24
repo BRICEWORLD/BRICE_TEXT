@@ -632,7 +632,7 @@ background:
 
 radial-gradient(
 circle,
-rgba(167,139,250,.35)
+rgba(167,139,250,.35),
 transparent 70%
 );
 
@@ -2204,5 +2204,43 @@ background:transparent;
 
         width: 2px;
     }
+
+}
+
+
+.category-card{
+
+background:
+linear-gradient(
+145deg,
+rgba(167,139,250,.12),
+rgba(10,10,15,.95)
+);
+
+border:1px solid rgba(167,139,250,.55);
+
+box-shadow:
+0 0 25px rgba(167,139,250,.15),
+inset 0 0 25px rgba(167,139,250,.05);
+
+}
+
+
+.category-card h3{
+
+color:#DDD6FE;
+
+text-shadow:
+0 0 15px rgba(167,139,250,.5);
+
+}
+
+
+.category-card:hover{
+
+border-color:#A78BFA;
+
+box-shadow:
+0 0 40px rgba(167,139,250,.35);
 
 }
