@@ -69,7 +69,6 @@ direction:rtl;
 font-family:"Vazirmatn",sans-serif;
 
 background:
-
 radial-gradient(
 circle at top,
 rgba(185,243,255,.08),
@@ -78,9 +77,9 @@ transparent 35%
 
 linear-gradient(
 180deg,
-#050505,
-#0b0b0b,
-#030303
+#07090D,
+#0D1117,
+#050505
 );
 
 color:var(--text);
@@ -696,7 +695,9 @@ margin-bottom:15px;
 
 .category-card h3{
 
-color:var(--ice-light);
+color:#F4D98B;
+
+}
 
 text-shadow:
 
@@ -1843,4 +1844,19 @@ bottom:15px;
     font-size: 11px;
 }
 
+}
+
+
+
+
+section,
+.hero,
+.categories,
+.random-section,
+.search-section,
+.quotes-section,
+.quick-section,
+.brand-contact,
+.about-section{
+background:transparent;
 }
