@@ -1028,7 +1028,27 @@ Pouya Brice
 
 <script src="script.js"></script>
 
+<script>
 
+if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", () => {
+
+navigator.serviceWorker.register("sw.js")
+
+.then(() => {
+console.log("BRICE TEXT Service Worker فعال شد");
+})
+
+.catch((error)=>{
+console.log("خطا در Service Worker:", error);
+});
+
+});
+
+}
+
+</script>
 </body>
 
 </html>
