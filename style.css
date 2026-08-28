@@ -2613,14 +2613,8 @@ body::before{
         padding:16px;
     }
 
-}
-
-
-
 
 }
-
-
 
 /* =====================================
    BRICE TEXT
@@ -2827,5 +2821,70 @@ body > footer a[href="index.html"]:active {
 
         border-radius: 0 18px 18px 0;
     }
+
+}
+
+/* BRICE HOME BUTTON */
+
+footer a[href="index.html"]{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:90%;
+max-width:420px;
+
+height:65px;
+
+margin:25px auto 0;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+135deg,
+rgba(168,85,247,.25),
+rgba(214,178,94,.18)
+);
+
+border:1px solid #D6B25E;
+
+color:#F4D98B;
+
+font-size:18px;
+
+font-weight:700;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.5),
+0 0 25px rgba(168,85,247,.25);
+
+transition:.3s;
+
+}
+
+
+footer a[href="index.html"]:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 15px 40px rgba(168,85,247,.35);
+
+}
+
+
+@media(max-width:600px){
+
+footer a[href="index.html"]{
+
+width:94%;
+
+height:60px;
+
+font-size:16px;
+
+}
 
 }
