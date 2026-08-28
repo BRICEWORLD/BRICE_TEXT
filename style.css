@@ -2681,3 +2681,23 @@ color:#9993B5;
 margin-bottom:20px;
 
 }
+
+
+footer a[href="index.html"]{
+    display:flex !important;
+    width:90% !important;
+    max-width:430px !important;
+    height:70px !important;
+    margin:30px auto !important;
+
+    align-items:center !important;
+    justify-content:center !important;
+
+    background:#111 !important;
+    border:2px solid gold !important;
+    border-radius:25px !important;
+
+    color:gold !important;
+    font-size:25px !important;
+    font-weight:bold !important;
+}
