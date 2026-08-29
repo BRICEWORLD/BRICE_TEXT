@@ -3476,3 +3476,60 @@ body::before{
         font-size:12px;
     }
 }
+
+
+/* =====================================
+   HOME CARD - CONTENT ALIGN FIX
+===================================== */
+
+.home-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.home-card h2,
+.home-card p{
+    width:100%;
+    max-width:100%;
+    text-align:center;
+}
+
+.home-card p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.home-button{
+    align-self:center;
+}
+
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .home-card{
+        width:88%;
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .home-card h2{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .home-card p{
+        width:100%;
+        max-width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .home-button{
+        align-self:center;
+    }
+}
