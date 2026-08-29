@@ -2617,87 +2617,262 @@ body::before{
 }
 
 
-/* BRICE TEXT HOME BUTTON FIX */
+/* ==============================
+   FOOTER - BRICE TEXT
+============================== */
 
-footer a[href="index.html"]{
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-width:90%;
-max-width:430px;
-
-min-height:65px;
-
-margin:25px auto 0;
-
-padding:15px 25px;
-
-border:1px solid #D6B25E;
-
-border-radius:22px;
-
-background:
-linear-gradient(
-135deg,
-rgba(214,178,94,.15),
-rgba(168,85,247,.15)
-);
-
-color:#F4D98B;
-
-font-size:18px;
-
-font-weight:700;
-
-text-decoration:none;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.5),
-0 0 25px rgba(168,85,247,.15);
-
-transition:.3s;
-
+.site-footer {
+    width: 100%;
+    padding: 45px 20px 35px;
+    margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 
-footer a[href="index.html"]:hover{
+/* کارت بازگشت به خانه */
 
-transform:translateY(-4px);
+.home-card {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    padding: 35px 25px;
 
-box-shadow:
-0 15px 40px rgba(168,85,247,.3);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 25, 55, 0.95),
+            rgba(15, 18, 35, 0.98)
+        );
 
+    border: 1px solid rgba(168, 85, 247, 0.55);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(139, 92, 246, 0.12);
 }
 
 
-footer p{
+/* نور پشت کارت */
 
-text-align:center;
+.home-card::before {
+    content: "";
 
-color:#9993B5;
+    position: absolute;
 
-margin-bottom:20px;
+    width: 180px;
+    height: 180px;
 
+    top: -100px;
+    right: -70px;
+
+    background: rgba(139, 92, 246, 0.22);
+
+    filter: blur(50px);
+
+    border-radius: 50%;
 }
 
 
-footer a[href="index.html"]{
-    display:flex !important;
-    width:90% !important;
-    max-width:430px !important;
-    height:70px !important;
-    margin:30px auto !important;
+.home-card::after {
+    content: "";
 
-    align-items:center !important;
-    justify-content:center !important;
+    position: absolute;
 
-    background:#111 !important;
-    border:2px solid gold !important;
-    border-radius:25px !important;
+    width: 150px;
+    height: 150px;
 
-    color:gold !important;
-    font-size:25px !important;
-    font-weight:bold !important;
+    bottom: -90px;
+    left: -60px;
+
+    background: rgba(236, 72, 153, 0.16);
+
+    filter: blur(50px);
+
+    border-radius: 50%;
+}
+
+
+/* آیکون خانه */
+
+.home-card-icon {
+    position: relative;
+    z-index: 1;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.25),
+            rgba(236, 72, 153, 0.20)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* عنوان */
+
+.home-card h2 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+
+/* متن */
+
+.home-card p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 500px;
+
+    margin: 0 auto 25px;
+
+    color: #c8c8d4;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    text-align: center;
+}
+
+
+/* دکمه */
+
+.home-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-width: 230px;
+
+    padding: 16px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #ec4899
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(139, 92, 246, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* فلش */
+
+.home-button .arrow {
+    font-size: 22px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* حالت هاور */
+
+.home-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(236, 72, 153, 0.4);
+}
+
+
+.home-button:hover .arrow {
+    transform: translateX(-5px);
+}
+
+
+/* برند پایین */
+
+.footer-brand {
+    color: #9d9dac;
+
+    font-size: 15px;
+
+    padding-top: 5px;
+}
+
+
+/* موبایل */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 35px 15px 30px;
+    }
+
+    .home-card {
+        padding: 30px 18px;
+        border-radius: 24px;
+    }
+
+    .home-card h2 {
+        font-size: 22px;
+    }
+
+    .home-card p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .home-button {
+        width: 100%;
+        max-width: 280px;
+
+        padding: 15px 20px;
+
+        font-size: 15px;
+    }
+
 }
