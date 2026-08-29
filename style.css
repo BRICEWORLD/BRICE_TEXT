@@ -2617,262 +2617,416 @@ body::before{
 }
 
 
-/* ==============================
-   FOOTER - BRICE TEXT
-============================== */
+/* =====================================
+   BRICE TEXT
+   PREMIUM HOME CTA
+===================================== */
 
-.site-footer {
-    width: 100%;
-    padding: 45px 20px 35px;
-    margin-top: 20px;
-    text-align: center;
-    box-sizing: border-box;
+.site-footer{
+
+    width:100%;
+
+    padding:55px 18px 30px;
+
+    text-align:center;
+
 }
 
 
-/* کارت بازگشت به خانه */
+/* =============================
+   MAIN HOME CARD
+============================= */
 
-.home-card {
-    position: relative;
-    max-width: 650px;
-    margin: 0 auto 35px;
-    padding: 35px 25px;
+.home-card{
+
+    position:relative;
+
+    width:min(900px, 100%);
+
+    margin:0 auto 30px;
+
+    padding:70px 35px 45px;
+
+    overflow:hidden;
+
+    border-radius:32px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(30, 25, 55, 0.95),
-            rgba(15, 18, 35, 0.98)
-        );
 
-    border: 1px solid rgba(168, 85, 247, 0.55);
+    linear-gradient(
+        135deg,
+        rgba(53, 20, 95, .96),
+        rgba(22, 12, 45, .98) 48%,
+        rgba(75, 45, 15, .70)
+    );
 
-    border-radius: 28px;
-
-    overflow: hidden;
+    border:
+    1px solid rgba(168,85,247,.85);
 
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(139, 92, 246, 0.12);
+
+    0 0 0 1px rgba(244,217,139,.12),
+
+    0 18px 60px rgba(0,0,0,.65),
+
+    0 0 40px rgba(168,85,247,.25);
+
 }
 
 
-/* نور پشت کارت */
+/* =============================
+   GOLD GLOW
+============================= */
 
-.home-card::before {
-    content: "";
+.home-card::before{
 
-    position: absolute;
+    content:"";
 
-    width: 180px;
-    height: 180px;
+    position:absolute;
 
-    top: -100px;
-    right: -70px;
+    width:350px;
+    height:350px;
 
-    background: rgba(139, 92, 246, 0.22);
+    left:-130px;
+    bottom:-180px;
 
-    filter: blur(50px);
-
-    border-radius: 50%;
-}
-
-
-.home-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    bottom: -90px;
-    left: -60px;
-
-    background: rgba(236, 72, 153, 0.16);
-
-    filter: blur(50px);
-
-    border-radius: 50%;
-}
-
-
-/* آیکون خانه */
-
-.home-card-icon {
-    position: relative;
-    z-index: 1;
-
-    width: 60px;
-    height: 60px;
-
-    margin: 0 auto 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 28px;
+    border-radius:50%;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(139, 92, 246, 0.25),
-            rgba(236, 72, 153, 0.20)
-        );
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    radial-gradient(
+        circle,
+        rgba(214,178,94,.32),
+        transparent 68%
+    );
 
-    border-radius: 18px;
+    filter:blur(25px);
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.3);
+    pointer-events:none;
+
 }
 
 
-/* عنوان */
+/* =============================
+   PURPLE GLOW
+============================= */
 
-.home-card h2 {
-    position: relative;
-    z-index: 1;
+.home-card::after{
 
-    margin: 0 0 12px;
+    content:"";
 
-    color: #ffffff;
+    position:absolute;
 
-    font-size: 25px;
+    width:350px;
+    height:350px;
 
-    font-weight: 800;
-}
+    right:-120px;
+    top:-180px;
 
-
-/* متن */
-
-.home-card p {
-    position: relative;
-    z-index: 1;
-
-    max-width: 500px;
-
-    margin: 0 auto 25px;
-
-    color: #c8c8d4;
-
-    font-size: 16px;
-
-    line-height: 2;
-
-    text-align: center;
-}
-
-
-/* دکمه */
-
-.home-button {
-    position: relative;
-    z-index: 1;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    min-width: 230px;
-
-    padding: 16px 25px;
+    border-radius:50%;
 
     background:
-        linear-gradient(
-            135deg,
-            #8b5cf6,
-            #ec4899
-        );
 
-    color: #ffffff;
+    radial-gradient(
+        circle,
+        rgba(168,85,247,.35),
+        transparent 68%
+    );
 
-    text-decoration: none;
+    filter:blur(25px);
 
-    font-size: 16px;
+    pointer-events:none;
 
-    font-weight: 800;
+}
 
-    border-radius: 16px;
+
+/* =============================
+   DECORATIVE BORDER
+============================= */
+
+.home-card{
+
+    isolation:isolate;
+
+}
+
+
+/* =============================
+   HOME ICON
+============================= */
+
+.home-card-icon{
+
+    position:absolute;
+
+    z-index:3;
+
+    top:-48px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:96px;
+    height:96px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:43px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #7E22CE,
+        #A855F7,
+        #6B21A8
+    );
+
+    border:
+
+    2px solid rgba(244,217,139,.65);
 
     box-shadow:
-        0 10px 30px rgba(139, 92, 246, 0.35);
+
+    0 12px 30px rgba(0,0,0,.55),
+
+    0 0 30px rgba(168,85,247,.55),
+
+    inset 0 0 20px rgba(255,255,255,.12);
+
+}
+
+
+/* =============================
+   CONTENT
+============================= */
+
+.home-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:12px 0 12px;
+
+    color:var(--white);
+
+    font-size:clamp(28px, 5vw, 42px);
+
+    font-weight:800;
+
+    text-shadow:
+
+    0 0 18px rgba(168,85,247,.35);
+
+}
+
+
+.home-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+
+    margin:0 auto 32px;
+
+    color:#D8D5E5;
+
+    font-size:17px;
+
+    line-height:2.2;
+
+}
+
+
+/* =============================
+   HOME BUTTON
+============================= */
+
+.home-button{
+
+    position:relative;
+
+    z-index:3;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:15px;
+
+    min-width:310px;
+
+    padding:17px 35px;
+
+    border-radius:18px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light),
+        #D6B25E
+    );
+
+    color:#17110A;
+
+    font-family:inherit;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    border:
+
+    1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+
+    0 12px 30px rgba(214,178,94,.22),
+
+    inset 0 1px 1px rgba(255,255,255,.55);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transform .3s ease,
+    box-shadow .3s ease;
+
 }
 
 
-/* فلش */
+.home-button:hover{
 
-.home-button .arrow {
-    font-size: 22px;
-
-    transition: transform 0.3s ease;
-}
-
-
-/* حالت هاور */
-
-.home-button:hover {
-    transform: translateY(-4px);
+    transform:translateY(-5px) scale(1.02);
 
     box-shadow:
-        0 15px 35px rgba(236, 72, 153, 0.4);
+
+    0 18px 40px rgba(214,178,94,.35),
+
+    0 0 25px rgba(244,217,139,.18);
+
 }
 
 
-.home-button:hover .arrow {
-    transform: translateX(-5px);
+.home-button .arrow{
+
+    font-size:25px;
+
+    transition:.3s;
+
 }
 
 
-/* برند پایین */
+.home-button:hover .arrow{
 
-.footer-brand {
-    color: #9d9dac;
+    transform:translateX(-7px);
 
-    font-size: 15px;
-
-    padding-top: 5px;
 }
 
 
-/* موبایل */
+/* =============================
+   FOOTER BRAND
+============================= */
 
-@media (max-width: 600px) {
+.footer-brand{
 
-    .site-footer {
-        padding: 35px 15px 30px;
+    color:var(--muted);
+
+    font-size:16px;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    padding-top:5px;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:600px){
+
+    .site-footer{
+
+        padding:70px 14px 28px;
+
     }
 
-    .home-card {
-        padding: 30px 18px;
-        border-radius: 24px;
+
+    .home-card{
+
+        padding:65px 20px 32px;
+
+        border-radius:26px;
+
     }
 
-    .home-card h2 {
-        font-size: 22px;
+
+    .home-card-icon{
+
+        width:82px;
+        height:82px;
+
+        top:-42px;
+
+        font-size:36px;
+
     }
 
-    .home-card p {
-        font-size: 15px;
-        line-height: 1.9;
+
+    .home-card h2{
+
+        font-size:30px;
+
+        margin-top:5px;
+
     }
 
-    .home-button {
-        width: 100%;
-        max-width: 280px;
 
-        padding: 15px 20px;
+    .home-card p{
 
-        font-size: 15px;
+        font-size:15px;
+
+        line-height:2.1;
+
+        margin-bottom:27px;
+
+    }
+
+
+    .home-button{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:16px 20px;
+
+        font-size:16px;
+
+        border-radius:16px;
+
+    }
+
+
+    .footer-brand{
+
+        font-size:14px;
+
+        line-height:2;
+
     }
 
 }
