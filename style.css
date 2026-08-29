@@ -3032,10 +3032,6 @@ body::before{
 }
 
 
-
-/* TEST HOME CARD */
-
-.home-card{
-    background:red !important;
-    border:5px solid yellow !important;
+body {
+    background: lime !important;
 }
