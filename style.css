@@ -3481,3 +3481,356 @@ body::before{
     }
 
 }
+
+
+
+/* =====================================
+   BRICE TEXT
+   HOME CARD - COMPACT SEGMENTED
+===================================== */
+
+.home-card{
+
+    position:relative;
+
+    width:min(760px, 92%);
+
+    margin:45px auto 25px;
+
+    padding:48px 28px 32px;
+
+    border:none;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(53,20,95,.96),
+            rgba(22,12,45,.98) 50%,
+            rgba(55,35,15,.75)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.55),
+        0 0 30px rgba(168,85,247,.18);
+
+    overflow:visible;
+
+    isolation:isolate;
+}
+
+
+/* =====================================
+   SEGMENTED BORDER
+===================================== */
+
+.home-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    padding:1.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+
+            #A855F7 0%,
+            #A855F7 13%,
+
+            transparent 13%,
+            transparent 22%,
+
+            #D6B25E 22%,
+            #D6B25E 36%,
+
+            transparent 36%,
+            transparent 47%,
+
+            #A855F7 47%,
+            #A855F7 63%,
+
+            transparent 63%,
+            transparent 73%,
+
+            #D6B25E 73%,
+            #D6B25E 88%,
+
+            transparent 88%,
+            transparent 100%
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+
+/* =====================================
+   PURPLE GLOW
+===================================== */
+
+.home-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    right:-100px;
+    top:-100px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168,85,247,.22),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+/* =====================================
+   ICON
+===================================== */
+
+.home-card-icon{
+
+    position:absolute;
+
+    z-index:3;
+
+    top:-30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7E22CE,
+            #A855F7,
+            #6B21A8
+        );
+
+    border:2px solid rgba(244,217,139,.75);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.5),
+        0 0 22px rgba(168,85,247,.4);
+
+}
+
+
+/* =====================================
+   TITLE
+===================================== */
+
+.home-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:8px 0 10px;
+
+    font-size:clamp(25px,5vw,38px);
+
+    line-height:1.6;
+
+    color:white;
+
+    text-shadow:
+        0 0 15px rgba(168,85,247,.3);
+
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.home-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:600px;
+
+    margin:0 auto 22px;
+
+    color:#D8D5E5;
+
+    font-size:16px;
+
+    line-height:2;
+
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.home-button{
+
+    position:relative;
+
+    z-index:3;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    min-width:270px;
+
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+    color:#17110A;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 10px 25px rgba(214,178,94,.2);
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:600px){
+
+    .site-footer{
+
+        padding:55px 10px 25px;
+
+    }
+
+
+    .home-card{
+
+        width:94%;
+
+        margin:38px auto 22px;
+
+        padding:45px 17px 25px;
+
+        border-radius:21px;
+
+    }
+
+
+    .home-card::before{
+
+        border-radius:21px;
+
+    }
+
+
+    .home-card-icon{
+
+        width:58px;
+        height:58px;
+
+        top:-29px;
+
+        font-size:25px;
+
+    }
+
+
+    .home-card h2{
+
+        font-size:25px;
+
+        line-height:1.7;
+
+        margin:5px 0 8px;
+
+    }
+
+
+    .home-card p{
+
+        font-size:14px;
+
+        line-height:2;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .home-button{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:14px 15px;
+
+        font-size:15px;
+
+        border-radius:50px;
+
+    }
+
+}
