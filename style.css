@@ -3208,3 +3208,54 @@ body::before{
     }
 
 }
+
+
+
+/* =====================================
+   BRICE TEXT - FIX HOME ICON
+===================================== */
+
+.home-card{
+    position:relative;
+    overflow:visible !important;
+    z-index:5;
+}
+
+.home-card-icon{
+    position:absolute;
+    top:-32px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:68px;
+    height:68px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+
+    border-radius:50%;
+
+    z-index:20;
+}
+
+/* موبایل */
+@media(max-width:600px){
+
+    .home-card{
+        overflow:visible !important;
+        margin-top:45px;
+    }
+
+    .home-card-icon{
+        top:-30px;
+
+        width:62px;
+        height:62px;
+
+        font-size:27px;
+    }
+
+}
