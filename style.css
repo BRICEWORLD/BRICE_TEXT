@@ -3426,3 +3426,53 @@ body::before{
     }
 
 }
+
+
+
+@media (max-width:600px){
+
+    .site-footer{
+        padding:40px 8px 20px;
+    }
+
+    .home-card{
+        width:88%;
+        padding:38px 14px 22px;
+        border-radius:20px;
+    }
+
+    .home-card-icon{
+        width:58px;
+        height:58px;
+        top:-29px;
+        font-size:26px;
+    }
+
+    .home-card h2{
+        font-size:21px;
+        line-height:1.6;
+        margin:5px 0;
+    }
+
+    .home-card p{
+        font-size:12px;
+        line-height:1.9;
+        margin-bottom:15px;
+    }
+
+    .home-button{
+        min-width:0;
+        width:auto;
+        padding:9px 18px;
+        font-size:13px;
+        border-radius:40px;
+    }
+
+    .home-button .arrow{
+        font-size:17px;
+    }
+
+    .footer-brand{
+        font-size:12px;
+    }
+}
