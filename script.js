@@ -1,8 +1,7 @@
 /* =====================================
-   BRICE TEXT V7
+   BRICE TEXT V8
    Optimized JavaScript
 ===================================== */
-
 
 // ===============================
 // COPY SYSTEM
@@ -42,8 +41,6 @@ function copyText(text, button){
 
 }
 
-
-
 function fallbackCopy(text, button){
 
     const area = document.createElement("textarea");
@@ -57,7 +54,6 @@ function fallbackCopy(text, button){
     document.execCommand("copy");
 
     area.remove();
-
 
     if(button){
 
@@ -73,41 +69,29 @@ function fallbackCopy(text, button){
 
 }
 
-
-
-
 // ===============================
 // QUOTES DISPLAY
 // ===============================
 
-
 const quotesContainer =
 document.getElementById("quotesContainer");
 
-
 const searchInput =
 document.getElementById("searchInput");
-
-
 
 function displayQuotes(list){
 
     if(!quotesContainer) return;
 
-
     quotesContainer.innerHTML = "";
 
-
     list.forEach(quote=>{
-
 
         const card =
         document.createElement("div");
 
-
         card.className =
         "quote-card";
-
 
         card.innerHTML = `
 
@@ -121,10 +105,8 @@ function displayQuotes(list){
 
         `;
 
-
         const btn =
         card.querySelector(".copy-btn");
-
 
         btn.onclick = ()=>{
 
@@ -135,23 +117,14 @@ function displayQuotes(list){
 
         };
 
-
         quotesContainer.appendChild(card);
-
 
     });
 
-
 }
 
-
-
-
-
 // نمایش اولیه متن‌ها
-
 window.addEventListener("load",()=>{
-
 
     if(typeof quotes !== "undefined"){
 
@@ -161,80 +134,52 @@ window.addEventListener("load",()=>{
 
     }
 
-
 });
-
-
-
-
-
 
 // ===============================
 // SEARCH
 // ===============================
 
-
 if(searchInput){
-
 
     searchInput.addEventListener(
     "input",
     ()=>{
 
-
         const value =
         searchInput.value.trim();
 
-
         if(typeof quotes !== "undefined"){
-
 
             displayQuotes(
 
                 quotes.filter(q=>
-
                     q.text.includes(value)
-
                 )
 
             );
 
-
         }
-
 
     });
 
-
 }
-
-
-
-
-
 
 // ===============================
 // RANDOM TEXT
 // ===============================
 
-
 const randomBtn =
 document.getElementById("newQuoteBtn");
-
 
 const randomText =
 document.getElementById("randomQuote");
 
-
-
 if(randomBtn && randomText){
-
 
     randomBtn.onclick = ()=>{
 
-
         if(typeof quotes !== "undefined"){
-
 
             const random =
             quotes[
@@ -245,154 +190,74 @@ if(randomBtn && randomText){
                 )
             ];
 
-
             randomText.innerHTML =
             random.text;
 
-
         }
-
 
     };
 
-
 }
-
-
-
-
-
-
 
 // ===============================
 // CATEGORY COPY BUTTON
 // ===============================
 
-
 document
 .querySelectorAll(".quote-box")
 .forEach(box=>{
 
-
     const text =
     box.querySelector("p");
 
-
     if(text){
-
 
         text.classList.add(
             "quote-text"
         );
 
-
         const button =
         document.createElement("button");
-
 
         button.className =
         "copy-btn";
 
-
         button.innerHTML =
         "📋 کپی متن";
 
-
         button.onclick = ()=>{
-
 
             copyText(
                 text.innerText,
                 button
             );
 
-
         };
-
 
         box.appendChild(button);
 
-
     }
 
-
 });
-
-
-
-
-
 
 // ===============================
 // MOBILE MENU
 // ===============================
 
-
 const menuBtn =
 document.querySelector(".menu-btn");
-
 
 const navLinks =
 document.querySelector(".nav-links");
 
-
-
 if(menuBtn && navLinks){
 
-
     menuBtn.onclick = ()=>{
-
 
         navLinks.classList.toggle(
             "active"
         );
 
-
     };
 
-
 }
-
-
-
-
-
-
-
-// ===============================
-// LOADER
-// ===============================
-
-
-window.addEventListener(
-"load",
-()=>{
-
-
-    document.body.classList.add(
-        "loaded"
-    );
-
-
-    const loader =
-    document.getElementById("loader");
-
-
-
-    if(loader){
-
-
-        setTimeout(()=>{
-
-
-            loader.style.display =
-            "none";
-
-
-        },700);
-
-
-    }
-
-
-});
