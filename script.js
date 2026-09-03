@@ -1,6 +1,6 @@
 /* =====================================
-   BRICE TEXT V6
-   Complete JavaScript
+   BRICE TEXT V7
+   Optimized JavaScript
 ===================================== */
 
 
@@ -12,39 +12,67 @@ function copyText(text, button){
 
     if(navigator.clipboard){
 
-        navigator.clipboard.writeText(text).then(()=>{
+        navigator.clipboard.writeText(text)
+        .then(()=>{
 
             if(button){
-                button.innerHTML="✅ کپی شد";
+
+                button.innerHTML = "✅ کپی شد";
 
                 setTimeout(()=>{
-                    button.innerHTML="📋 کپی متن";
+
+                    button.innerHTML = "📋 کپی متن";
+
                 },1500);
+
             }
+
+        })
+        .catch(()=>{
+
+            fallbackCopy(text, button);
 
         });
 
     }else{
 
-        let area=document.createElement("textarea");
-        area.value=text;
-
-        document.body.appendChild(area);
-        area.select();
-        document.execCommand("copy");
-        area.remove();
-
-        if(button){
-            button.innerHTML="✅ کپی شد";
-
-            setTimeout(()=>{
-                button.innerHTML="📋 کپی متن";
-            },1500);
-        }
+        fallbackCopy(text, button);
 
     }
 
 }
+
+
+
+function fallbackCopy(text, button){
+
+    const area = document.createElement("textarea");
+
+    area.value = text;
+
+    document.body.appendChild(area);
+
+    area.select();
+
+    document.execCommand("copy");
+
+    area.remove();
+
+
+    if(button){
+
+        button.innerHTML = "✅ کپی شد";
+
+        setTimeout(()=>{
+
+            button.innerHTML = "📋 کپی متن";
+
+        },1500);
+
+    }
+
+}
+
 
 
 
@@ -64,67 +92,79 @@ document.getElementById("searchInput");
 
 function displayQuotes(list){
 
-if(!quotesContainer) return;
+    if(!quotesContainer) return;
 
 
-quotesContainer.innerHTML="";
+    quotesContainer.innerHTML = "";
 
 
-list.forEach(quote=>{
+    list.forEach(quote=>{
 
 
-const card=document.createElement("div");
+        const card =
+        document.createElement("div");
 
 
-card.className="quote-card";
+        card.className =
+        "quote-card";
 
 
-card.innerHTML=`
+        card.innerHTML = `
 
-<p class="quote-text">
-${quote.text}
-</p>
+        <p class="quote-text">
+        ${quote.text}
+        </p>
 
-<button class="copy-btn">
-📋 کپی متن
-</button>
+        <button class="copy-btn">
+        📋 کپی متن
+        </button>
 
-`;
-
-
-
-const btn=card.querySelector(".copy-btn");
+        `;
 
 
-btn.onclick=()=>{
-
-copyText(
-quote.text,
-btn
-);
-
-};
+        const btn =
+        card.querySelector(".copy-btn");
 
 
+        btn.onclick = ()=>{
 
-quotesContainer.appendChild(card);
+            copyText(
+                quote.text,
+                btn
+            );
 
+        };
+
+
+        quotesContainer.appendChild(card);
+
+
+    });
+
+
+}
+
+
+
+
+
+// نمایش اولیه متن‌ها
+
+window.addEventListener("load",()=>{
+
+
+    if(typeof quotes !== "undefined"){
+
+        displayQuotes(
+            quotes.slice(0,6)
+        );
+
+    }
 
 
 });
 
 
-}
-
-
-
-if(typeof quotes !== "undefined"){
-
-displayQuotes(
-quotes.slice(0,6)
-);
-
-}
 
 
 
@@ -136,99 +176,39 @@ quotes.slice(0,6)
 
 if(searchInput){
 
-searchInput.addEventListener(
-"input",
-()=>{
+
+    searchInput.addEventListener(
+    "input",
+    ()=>{
 
 
-const value =
-searchInput.value.trim();
+        const value =
+        searchInput.value.trim();
 
 
-if(typeof quotes !== "undefined"){
-
-displayQuotes(
-
-quotes.filter(q=>
-
-q.text.includes(value)
-
-)
-
-);
-
-}
+        if(typeof quotes !== "undefined"){
 
 
-});
+            displayQuotes(
+
+                quotes.filter(q=>
+
+                    q.text.includes(value)
+
+                )
+
+            );
 
 
-}
+        }
 
 
-
-
-
-// ===============================
-// CATEGORY COPY BUTTON
-// ===============================
-
-
-document.querySelectorAll(".quote-box")
-.forEach(box=>{
-
-
-const text =
-box.querySelector("p");
-
-
-
-if(text){
-
-
-
-text.classList.add(
-"quote-text"
-);
-
-
-
-const button =
-document.createElement("button");
-
-
-
-button.className="copy-btn";
-
-
-button.innerHTML=
-"📋 کپی متن";
-
-
-
-button.onclick=()=>{
-
-
-copyText(
-text.innerText,
-button
-);
-
-
-
-};
-
-
-
-box.appendChild(button);
-
+    });
 
 
 }
 
 
-
-});
 
 
 
@@ -239,7 +219,7 @@ box.appendChild(button);
 
 
 const randomBtn =
-document.querySelector(".random-btn");
+document.getElementById("newQuoteBtn");
 
 
 const randomText =
@@ -247,29 +227,97 @@ document.getElementById("randomQuote");
 
 
 
-if(randomBtn && randomText && typeof quotes !== "undefined"){
+if(randomBtn && randomText){
 
 
-randomBtn.onclick=()=>{
+    randomBtn.onclick = ()=>{
 
 
-let random =
-quotes[
-Math.floor(
-Math.random()*quotes.length
-)
-];
+        if(typeof quotes !== "undefined"){
 
 
-randomText.innerHTML =
-random.text;
+            const random =
+            quotes[
+                Math.floor(
+                    Math.random()
+                    *
+                    quotes.length
+                )
+            ];
 
 
+            randomText.innerHTML =
+            random.text;
 
-};
+
+        }
+
+
+    };
 
 
 }
+
+
+
+
+
+
+
+// ===============================
+// CATEGORY COPY BUTTON
+// ===============================
+
+
+document
+.querySelectorAll(".quote-box")
+.forEach(box=>{
+
+
+    const text =
+    box.querySelector("p");
+
+
+    if(text){
+
+
+        text.classList.add(
+            "quote-text"
+        );
+
+
+        const button =
+        document.createElement("button");
+
+
+        button.className =
+        "copy-btn";
+
+
+        button.innerHTML =
+        "📋 کپی متن";
+
+
+        button.onclick = ()=>{
+
+
+            copyText(
+                text.innerText,
+                button
+            );
+
+
+        };
+
+
+        box.appendChild(button);
+
+
+    }
+
+
+});
+
 
 
 
@@ -292,18 +340,20 @@ document.querySelector(".nav-links");
 if(menuBtn && navLinks){
 
 
-menuBtn.onclick=()=>{
+    menuBtn.onclick = ()=>{
 
 
-navLinks.classList.toggle(
-"active"
-);
+        navLinks.classList.toggle(
+            "active"
+        );
 
 
-};
+    };
 
 
 }
+
+
 
 
 
@@ -319,48 +369,30 @@ window.addEventListener(
 ()=>{
 
 
-document.body.classList.add(
-"loaded"
-);
+    document.body.classList.add(
+        "loaded"
+    );
+
+
+    const loader =
+    document.getElementById("loader");
 
 
 
-const loader =
-document.getElementById("loader");
+    if(loader){
 
 
-
-if(loader){
-
-
-setTimeout(()=>{
+        setTimeout(()=>{
 
 
-loader.style.display="none";
+            loader.style.display =
+            "none";
 
 
-},700);
+        },700);
 
 
+    }
 
-}
-
-
-
-});
-
-
-
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-        const loader = document.getElementById("loader");
-
-        if(loader){
-            loader.style.display = "none";
-        }
-
-    },500);
 
 });
