@@ -1,14 +1,16 @@
-const CACHE_NAME = "brice-text-v3";
+const CACHE_NAME = "brice-text-v4";
+
+const APP_SCOPE = "/BRICE_TEXT/";
 
 const FILES_TO_CACHE = [
-    "/BRICE_TEXT/",
-    "/BRICE_TEXT/index.html",
-    "/BRICE_TEXT/style.css",
-    "/BRICE_TEXT/script.js",
-    "/BRICE_TEXT/quotes.js",
-    "/BRICE_TEXT/manifest.json",
-    "/BRICE_TEXT/icons/icon-192.png",
-    "/BRICE_TEXT/icons/icon-512.png"
+    APP_SCOPE,
+    APP_SCOPE + "index.html",
+    APP_SCOPE + "style.css",
+    APP_SCOPE + "script.js",
+    APP_SCOPE + "quotes.js",
+    APP_SCOPE + "manifest.json",
+    APP_SCOPE + "icons/icon-192.png",
+    APP_SCOPE + "icons/icon-512.png"
 ];
 
 
@@ -21,32 +23,8 @@ self.addEventListener("install", event => {
     event.waitUntil(
 
         caches.open(CACHE_NAME)
-        .then(cache => {
-
-            return Promise.all(
-
-                FILES_TO_CACHE.map(file => {
-
-                    return fetch(file)
-                    .then(response => {
-
-                        if (response.ok) {
-                            return cache.put(file, response);
-                        }
-
-                    })
-                    .catch(() => {
-
-                        console.log("Cache failed:", file);
-
-                    });
-
-                })
-
-            );
-
-        })
-        .then(() => self.skipWaiting())
+            .then(cache => cache.addAll(FILES_TO_CACHE))
+            .then(() => self.skipWaiting())
 
     );
 
@@ -62,24 +40,22 @@ self.addEventListener("activate", event => {
     event.waitUntil(
 
         caches.keys()
-        .then(keys => {
+            .then(keys => {
 
-            return Promise.all(
+                return Promise.all(
 
-                keys.map(key => {
+                    keys.map(key => {
 
-                    if (key !== CACHE_NAME) {
+                        if (key.startsWith("brice-text-") && key !== CACHE_NAME) {
+                            return caches.delete(key);
+                        }
 
-                        return caches.delete(key);
+                    })
 
-                    }
+                );
 
-                })
-
-            );
-
-        })
-        .then(() => self.clients.claim())
+            })
+            .then(() => self.clients.claim())
 
     );
 
@@ -92,19 +68,67 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
 
+    const request = event.request;
+
+    // فقط درخواست‌های GET
+    if (request.method !== "GET") {
+        return;
+    }
+
+    // فقط محدوده BRICE TEXT
+    const url = new URL(request.url);
+
+    if (url.origin !== self.location.origin) {
+        return;
+    }
+
+    if (!url.pathname.startsWith(APP_SCOPE)) {
+        return;
+    }
+
     event.respondWith(
 
-        caches.match(event.request)
-        .then(response => {
+        caches.match(request)
+            .then(cachedResponse => {
 
-            return response || fetch(event.request);
+                if (cachedResponse) {
+                    return cachedResponse;
+                }
 
-        })
-        .catch(() => {
+                return fetch(request)
+                    .then(networkResponse => {
 
-            return caches.match("/BRICE_TEXT/index.html");
+                        // ذخیره پاسخ‌های معتبر داخل Cache
+                        if (networkResponse && networkResponse.ok) {
 
-        })
+                            const responseClone = networkResponse.clone();
+
+                            caches.open(CACHE_NAME)
+                                .then(cache => {
+                                    cache.put(request, responseClone);
+                                });
+
+                        }
+
+                        return networkResponse;
+
+                    });
+
+            })
+            .catch(() => {
+
+                // اگر صفحه‌ای در حالت آفلاین درخواست شد،
+                // صفحه اصلی BRICE TEXT نمایش داده شود.
+                if (request.mode === "navigate") {
+                    return caches.match(APP_SCOPE + "index.html");
+                }
+
+                return new Response("", {
+                    status: 503,
+                    statusText: "Service Unavailable"
+                });
+
+            })
 
     );
 
