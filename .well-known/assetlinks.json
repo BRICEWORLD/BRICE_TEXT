@@ -1,1 +1,9 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.briceworld.bricetext",
+        "sha256_cert_fingerprints": ["0C:2B:9B:9C:12:0A:06:F1:EB:A5:DB:0C:C8:19:E2:22:82:FE:89:BE:0F:9A:BF:DE:92:A1:A0:93:B8:30:4C:F1"]
+      }
+    }]
 
