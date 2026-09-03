@@ -2,9 +2,8 @@
   "name": "BRICE TEXT",
   "short_name": "BRICE TEXT",
   "description": "مرجع متن‌های خاص فارسی",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
+"start_url": "/BRICE_TEXT/index.html",
+"scope": "/BRICE_TEXT/"  
   "background_color": "#05040A",
   "theme_color": "#A78BFA",
   "lang": "fa",
