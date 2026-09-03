@@ -20,10 +20,16 @@ self.addEventListener("install", event => {
     event.waitUntil(
 
         caches.open(CACHE_NAME)
-        .then(cache => cache.addAll(FILES_TO_CACHE))
-        .then(() => self.skipWaiting())
-
+.then(cache => {
+    return Promise.all(
+        FILES_TO_CACHE.map(file =>
+            fetch(file)
+            .then(response => cache.put(file, response))
+            .catch(() => {})
+        )
     );
+})
+.then(() => self.skipWaiting())
 
 });
 
