@@ -2,8 +2,9 @@
   "name": "BRICE TEXT",
   "short_name": "BRICE TEXT",
   "description": "مرجع متن‌های خاص فارسی",
-"start_url": "/BRICE_TEXT/index.html",
-"scope": "/BRICE_TEXT/"  
+  "start_url": "/BRICE_TEXT/",
+  "scope": "/BRICE_TEXT/",
+  "display": "standalone",
   "background_color": "#05040A",
   "theme_color": "#A78BFA",
   "lang": "fa",
@@ -11,13 +12,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./icons/icon-192.png",
+      "src": "/BRICE_TEXT/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "./icons/icon-512.png",
+      "src": "/BRICE_TEXT/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
