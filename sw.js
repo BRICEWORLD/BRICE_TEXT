@@ -1,18 +1,15 @@
-const CACHE_NAME = "brice-text-v2";
+const CACHE_NAME = "brice-text-v3";
 
 const FILES_TO_CACHE = [
-    "./",
-    "./index.html",
-    "./style.css",
-    "./script.js",
-    "./quotes.js",
-    "./manifest.json",
-
-    // آیکون‌های برنامه
-    "./icons/icon-192.png",
-    "./icons/icon-512.png"
+    "/BRICE_TEXT/",
+    "/BRICE_TEXT/index.html",
+    "/BRICE_TEXT/style.css",
+    "/BRICE_TEXT/script.js",
+    "/BRICE_TEXT/quotes.js",
+    "/BRICE_TEXT/manifest.json",
+    "/BRICE_TEXT/icons/icon-192.png",
+    "/BRICE_TEXT/icons/icon-512.png"
 ];
-
 
 // ================================
 // نصب برنامه
