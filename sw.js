@@ -1,4 +1,4 @@
-const CACHE_NAME = "brice-text-v5";
+const CACHE_NAME = "brice-text-v6";
 
 const APP_SCOPE = "/BRICE_TEXT/";
 
@@ -23,7 +23,30 @@ self.addEventListener("install", event => {
     event.waitUntil(
 
         caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(FILES_TO_CACHE))
+            .then(async cache => {
+
+                for (const file of FILES_TO_CACHE) {
+
+                    try {
+
+                        const response = await fetch(file);
+
+                        if (response.ok) {
+                            await cache.put(file, response);
+                        }
+
+                    } catch (error) {
+
+                        console.log(
+                            "Cache failed:",
+                            file
+                        );
+
+                    }
+
+                }
+
+            })
             .then(() => self.skipWaiting())
 
     );
@@ -46,8 +69,13 @@ self.addEventListener("activate", event => {
 
                     keys.map(key => {
 
-                        if (key.startsWith("brice-text-") && key !== CACHE_NAME) {
+                        if (
+                            key.startsWith("brice-text-") &&
+                            key !== CACHE_NAME
+                        ) {
+
                             return caches.delete(key);
+
                         }
 
                     })
@@ -70,12 +98,10 @@ self.addEventListener("fetch", event => {
 
     const request = event.request;
 
-    // فقط درخواست‌های GET
     if (request.method !== "GET") {
         return;
     }
 
-    // فقط محدوده BRICE TEXT
     const url = new URL(request.url);
 
     if (url.origin !== self.location.origin) {
@@ -98,14 +124,22 @@ self.addEventListener("fetch", event => {
                 return fetch(request)
                     .then(networkResponse => {
 
-                        // ذخیره پاسخ‌های معتبر داخل Cache
-                        if (networkResponse && networkResponse.ok) {
+                        if (
+                            networkResponse &&
+                            networkResponse.ok
+                        ) {
 
-                            const responseClone = networkResponse.clone();
+                            const responseClone =
+                                networkResponse.clone();
 
                             caches.open(CACHE_NAME)
                                 .then(cache => {
-                                    cache.put(request, responseClone);
+
+                                    cache.put(
+                                        request,
+                                        responseClone
+                                    );
+
                                 });
 
                         }
@@ -117,10 +151,12 @@ self.addEventListener("fetch", event => {
             })
             .catch(() => {
 
-                // اگر صفحه‌ای در حالت آفلاین درخواست شد،
-                // صفحه اصلی BRICE TEXT نمایش داده شود.
                 if (request.mode === "navigate") {
-                    return caches.match(APP_SCOPE + "index.html");
+
+                    return caches.match(
+                        APP_SCOPE + "index.html"
+                    );
+
                 }
 
                 return new Response("", {
