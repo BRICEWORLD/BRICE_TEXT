@@ -1,4 +1,4 @@
-const CACHE_NAME = "brice-text-v6";
+const CACHE_NAME = "brice-text-v5";
 
 const APP_SCOPE = "/BRICE_TEXT/";
 
